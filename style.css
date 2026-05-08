@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0494ee, #f5f5f5);
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Banner fixo no topo */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px;
+    background: #0494ee;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Foto de perfil */
+.bruno {
+    width: 90px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+    box-shadow: 0 0 6px #007bff;
+}
+
+/* Texto central */
+.texto h2 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.texto p {
+    font-size: 14px;
+    margin: 0;
+    color: #f7f2f2;
+}
+
+/* Menu à direita */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de ação */
+.acao {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.acao:hover {
+    background-color: #0056b3;
+}
+
+/* Container principal: carrossel + figurinha lado a lado */
+.conteudo {
+    display: flex;
+    justify-content: flex-start;
+    /* segue a mesma margem da imagem bruno */
+    align-items: flex-start;
+    margin: 160px 0 0 30px;
+    /* mesma direção da imagem bruno, só mais abaixo */
+    gap: 40px;
+    /* espaço entre carrossel e figurinha */
+}
+
+/* Carrossel */
+.carrossel {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 20s infinite;
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.slide:nth-child(4) {
+    animation-delay: 12s;
+}
+
+.slide:nth-child(5) {
+    animation-delay: 16s;
+}
+
+/* Figurinha + link YouTube */
+.elio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* imagem e link lado a lado */
+    gap: 8px;
+    /* espaço pequeno entre imagem e link */
+}
+
+.youtube-link {
+    text-decoration: none;
+    color: #ff0000;
+    /* azul estilo YouTube */
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    /* habilita ajuste fino */
+    top: -67px;
+    /* sobe um pouquinho */
+    left: 96px;
+    /* move um pouquinho para a direita */
+}
+
+
+
+
+.elio-texto {
+    font-size: 13px;
+    /* texto pequeno */
+    color: #230671;
+    /* cor discreta */
+    margin: 0;
+    /* sem margem extra */
+    text-align: center;
+    /* centralizado abaixo da imagem */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Figurinha arredondada */
+.elio {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Link YouTube */
+.youtube-link {
+    text-decoration: none;
+    color: #ff0000;
+    /* vermelho estilo YouTube */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.youtube-link:hover {
+    text-decoration: underline;
+}
+
+/* Animação */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
